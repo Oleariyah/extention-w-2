@@ -90,10 +90,6 @@ class Grid extends React.Component<GridProps> {
     );
   }
 
-  componentDidMount() {
-    this.props.fetch();
-  }
-
   componentDidUpdate(prevProps: GridProps) {
     if (
       prevProps.pagination.currentPage !== this.props.pagination.currentPage
