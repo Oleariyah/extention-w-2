@@ -30,6 +30,7 @@ const PureDescriptionSummary: FunctionComponent<StateProps> = (props) => (
           <AttributesTable
             attributes={props.attributes}
             sections={props.sections}
+            hideHeader={true}
           />
         )}
       </>

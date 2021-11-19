@@ -8,6 +8,7 @@ import { AttributeSection } from './AttributeSection';
 interface AttributesTableProps {
   sections: Section[];
   attributes: any;
+  hideHeader: boolean;
 }
 
 export const AttributesTable: FunctionComponent<AttributesTableProps> = (
@@ -20,7 +21,9 @@ export const AttributesTable: FunctionComponent<AttributesTableProps> = (
           key={index}
           section={section}
           attributes={props.attributes}
-          hideHeader={props.sections.length === 1}
+          hideHeader={
+            props.sections.length === 1 || index === 0 || props.hideHeader
+          }
         />
       ))}
     </tbody>

@@ -57,7 +57,11 @@ const PureManagementSummary = (props) => {
         <strong>{translate('Type')}</strong>: {type.label}
       </p>
       {attributes && (
-        <AttributesTable attributes={attributes} sections={[section]} />
+        <AttributesTable
+          attributes={attributes}
+          sections={[section]}
+          hideHeader={true}
+        />
       )}
       {/* Full calendar component is rendered as collapsed if it is not visible */}
       {schedules && isSchedulable && props.isVisible && (

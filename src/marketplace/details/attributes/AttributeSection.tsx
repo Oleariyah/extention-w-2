@@ -9,7 +9,6 @@ interface AttributeSectionProps {
   attributes: any;
   hideHeader: boolean;
 }
-
 export const AttributeSection: FunctionComponent<AttributeSectionProps> = (
   props,
 ) => (

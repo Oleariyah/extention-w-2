@@ -43,7 +43,11 @@ const PureOverviewSummary = (props) => {
       {props.nameInvalid ? (
         <p>{translate('Name is not valid.')}</p>
       ) : (
-        <AttributesTable attributes={props.formData} sections={[schema]} />
+        <AttributesTable
+          attributes={props.formData}
+          sections={[schema]}
+          hideHeader={true}
+        />
       )}
     </>
   );
