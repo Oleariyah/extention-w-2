@@ -3585,10 +3585,6 @@ msgstr ""
 msgid "Invitation rejection"
 msgstr ""
 
-#: src/auth/useAuthFeatures.ts
-msgid "Invitation token is not found."
-msgstr ""
-
 #: src/customer/team/CustomerTeam.tsx
 msgid "Invitations"
 msgstr ""
@@ -3918,7 +3914,7 @@ msgid "Loading actions"
 msgstr ""
 
 #: src/LoadingScreen.tsx
-msgid "Loading assets, please wait."
+msgid "Loading assets"
 msgstr ""
 
 #: src/customer/payments/InvoicesDropdown.tsx
@@ -7127,11 +7123,13 @@ msgid "Revoke"
 msgstr ""
 
 #: src/customer/team/ProjectsListGroup.tsx
+#: src/invitations/GroupInvitationsList.tsx
 #: src/invitations/InvitationsList.tsx
 #: src/invitations/actions/RoleGroup.tsx
 #: src/project/team/AddProjectUserDialog.tsx
 #: src/project/team/RoleGroup.tsx
 #: src/rancher/cluster/create/NodeRoleGroup.tsx
+#: src/user/UserPermissionRequestsList.tsx
 #: src/user/dashboard/ProjectPermissions.tsx
 #: src/user/support/UserFilter.tsx
 msgid "Role"
@@ -9842,10 +9840,6 @@ msgstr ""
 
 #: src/customer/details/store/effects.ts
 msgid "Unable to upload logo."
-msgstr ""
-
-#: src/auth/useAuthFeatures.ts
-msgid "Unable to validate invitation token."
 msgstr ""
 
 #: src/booking/BookingStateField.tsx
