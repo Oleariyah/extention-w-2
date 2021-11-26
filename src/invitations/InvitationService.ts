@@ -55,6 +55,10 @@ class InvitationServiceClass {
     return get<Invitation>(`/user-invitations/${invitation_uuid}/details/`);
   }
 
+  userGroupDetails(invitation_uuid) {
+    return get<Invitation>(`/user-group-invitations/${invitation_uuid}/`);
+  }
+
   executeAction(invitation_uuid, action, data?) {
     return post(`/user-invitations/${invitation_uuid}/${action}/`, data);
   }
