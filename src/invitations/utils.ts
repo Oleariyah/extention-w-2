@@ -47,10 +47,6 @@ export function checkAndAccept(token, invitationType = '') {
           }
         })
         .catch(() => {
-          clearInvitationToken();
-          store.dispatch(
-            showError(translate('Invitation is not valid anymore.')),
-          );
           router.stateService.go('profile.details');
         });
     } else {

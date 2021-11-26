@@ -3133,7 +3133,6 @@ msgstr ""
 msgid "Go to my profile"
 msgstr ""
 
-#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "Go to profile"
 msgstr ""
@@ -10189,10 +10188,6 @@ msgstr ""
 msgid "User events this month"
 msgstr ""
 
-#: src/invitations/GroupInvitationErrorMessage.tsx
-msgid "User group invitation is not valid"
-msgstr ""
-
 #: src/user/support/effects.ts
 msgid "User has been activated."
 msgstr ""
@@ -10816,7 +10811,6 @@ msgid "You will be redirected in a moment."
 msgstr ""
 
 #: src/error/InvalidObjectPage.tsx
-#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "You've either entered invalid URL or don't have enough permissions to view this page."
 msgstr ""
