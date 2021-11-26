@@ -103,13 +103,11 @@ export function acceptGroupRequest(token) {
   return InvitationService.acceptRequest(token)
     .then(() => {
       store.dispatch(showSuccess(translate('Your invitation was accepted.')));
-      clearInvitationToken();
     })
     .catch(({ response }) => {
       if (response.status === 404) {
         store.dispatch(showError(translate('Invitation is not found.')));
       } else if (response.status === 400) {
-        clearInvitationToken();
         store.dispatch(showError(translate('Invitation is not valid.')));
       } else if (response.status === 500) {
         store.dispatch(
@@ -127,13 +125,11 @@ export function rejectGroupRequest(token) {
   return InvitationService.rejectRequest(token)
     .then(() => {
       store.dispatch(showSuccess(translate('Your invitation was rejected.')));
-      clearInvitationToken();
     })
     .catch(({ response }) => {
       if (response.status === 404) {
         store.dispatch(showError(translate('Invitation is not found.')));
       } else if (response.status === 400) {
-        clearInvitationToken();
         store.dispatch(showError(translate('Invitation is not valid.')));
       } else if (response.status === 500) {
         store.dispatch(

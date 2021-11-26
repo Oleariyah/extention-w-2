@@ -42,7 +42,7 @@ export const states: StateDeclaration[] = [
   },
   {
     name: 'user-group-invitations',
-    url: '/user-group-invitations/:token/request/',
+    url: '/user-group-invitations/:token/',
     component: UserGroupInvitation,
   },
 ];

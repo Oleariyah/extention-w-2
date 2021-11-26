@@ -67,6 +67,10 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
+#: src/invitations/GroupinvitationButtons.tsx
+msgid "Accept Request"
+msgstr ""
+
 #: src/booking/AcceptAction.tsx
 msgid "Accept booking"
 msgstr ""
@@ -813,6 +817,7 @@ msgstr ""
 msgid "Attachments"
 msgstr ""
 
+#: src/marketplace/orders/item/details/OrderItemDetails.tsx
 #: src/marketplace/resources/ResourceSummary.tsx
 #: src/marketplace/resources/list/ExpandableResourceSummary.tsx
 msgid "Attributes"
@@ -1176,6 +1181,10 @@ msgstr ""
 #: src/user/keys/KeyCreateForm.tsx
 #: src/user/support/UserEmailChangeDialog.tsx
 msgid "Cancel"
+msgstr ""
+
+#: src/invitations/GroupinvitationButtons.tsx
+msgid "Cancel Request"
 msgstr ""
 
 #: src/booking/CancelAction.tsx
@@ -2297,6 +2306,10 @@ msgstr ""
 msgid "Do you really want to delete comment?"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
+msgid "Do you want to request confirmation?"
+msgstr ""
+
 #: src/rancher/node/actions/UnlinkAction.tsx
 msgid "Do you want to unlink instance {name}?"
 msgstr ""
@@ -3120,6 +3133,7 @@ msgstr ""
 msgid "Go to my profile"
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "Go to profile"
 msgstr ""
@@ -3878,6 +3892,7 @@ msgstr ""
 msgid "Limit-based"
 msgstr ""
 
+#: src/marketplace/orders/item/details/OrderItemDetails.tsx
 #: src/openstack/openstack-instance/OpenstackInstanceCheckoutSummary.tsx
 #: src/openstack/openstack-volume/OpenstackVolumeCheckoutSummary.tsx
 msgid "Limits"
@@ -6481,6 +6496,10 @@ msgstr ""
 msgid "Reject"
 msgstr ""
 
+#: src/invitations/GroupinvitationButtons.tsx
+msgid "Reject Request"
+msgstr ""
+
 #: src/invitations/UserPermissionRequestRejectButton.tsx
 msgid "Reject permission request by {name}"
 msgstr ""
@@ -6669,6 +6688,10 @@ msgstr ""
 
 #: src/slurm/RequestLimitsChangeDialog.tsx
 msgid "Request change of limits of SLURM allocation"
+msgstr ""
+
+#: src/invitations/GroupInvitationsConfirmDialog.tsx
+msgid "Request confirmation"
 msgstr ""
 
 #: src/marketplace/details/OverviewTab.tsx
@@ -10166,6 +10189,10 @@ msgstr ""
 msgid "User events this month"
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
+msgid "User group invitation is not valid"
+msgstr ""
+
 #: src/user/support/effects.ts
 msgid "User has been activated."
 msgstr ""
@@ -10784,10 +10811,12 @@ msgid "You need approval to finish purchasing of services."
 msgstr ""
 
 #: src/invitations/InvitationAccept.tsx
+#: src/invitations/UserGroupInvitation.tsx
 msgid "You will be redirected in a moment."
 msgstr ""
 
 #: src/error/InvalidObjectPage.tsx
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "You've either entered invalid URL or don't have enough permissions to view this page."
 msgstr ""
@@ -10817,11 +10846,16 @@ msgid "Your current email is:"
 msgstr ""
 
 #: src/invitations/InvitationAccept.tsx
+#: src/invitations/UserGroupInvitation.tsx
 msgid "Your invitation is being processed."
 msgstr ""
 
 #: src/invitations/utils.ts
 msgid "Your invitation was accepted."
+msgstr ""
+
+#: src/invitations/utils.ts
+msgid "Your invitation was rejected."
 msgstr ""
 
 #: src/project/ProjectTablePlaceholder.tsx
