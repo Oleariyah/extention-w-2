@@ -21,6 +21,18 @@ class InvitationServiceClass {
     });
   }
 
+  acceptRequest(uuid) {
+    return post(`/user-group-invitations/approve/`, {
+      uuid,
+    });
+  }
+
+  rejectRequest(uuid) {
+    return post(`/user-group-invitations/reject/`, {
+      uuid,
+    });
+  }
+
   cancel(invitation_uuid) {
     return this.executeAction(invitation_uuid, 'cancel');
   }

@@ -16,11 +16,11 @@ import { acceptInvitation, confirmInvitation } from './utils';
   - invitation token is set in invitation service;
   - user has filled all mandatory fields;
 */
-export function tryAcceptInvitation() {
+export function tryAcceptInvitation(invitationType) {
   UsersService.getCurrentUser().then((user) => {
     const token = getInvitationToken();
     if (token && !UsersService.mandatoryFieldsMissing(user)) {
-      confirmInvitation(token)
+      confirmInvitation(token, invitationType)
         .then((replaceEmail) => {
           acceptInvitation(token, replaceEmail);
         })

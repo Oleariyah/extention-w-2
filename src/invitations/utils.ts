@@ -18,26 +18,56 @@ const InvitationConfirmDialog = lazyComponent(
   'InvitationConfirmDialog',
 );
 
-export function checkAndAccept(token) {
+const GroupInvitationsConfirmDialog = lazyComponent(
+  () =>
+    import(
+      /* webpackChunkName: "GroupInvitationsConfirmDialog" */ './GroupInvitationsConfirmDialog'
+    ),
+  'GroupInvitationsConfirmDialog',
+);
+
+export function checkAndAccept(token, invitationType = '') {
   /*
      Call confirm token dialog, accept it and redirect user to profile.
      If user is not logged in - set token and redirect user to registration.
      If user is logged in and token is not valid - clear the token and redirect to user profile with the error message.
      */
   if (AuthService.isAuthenticated()) {
-    return confirmInvitation(token)
-      .then((replaceEmail) => {
-        acceptInvitation(token, replaceEmail).then(() => {
+    if (invitationType === 'user-group-request') {
+      return confirmInvitation(token, invitationType)
+        .then((accept) => {
+          if (accept) {
+            acceptGroupRequest(token).then(() => {
+              router.stateService.go('profile.details');
+            });
+          } else {
+            rejectGroupRequest(token).then(() => {
+              router.stateService.go('profile.details');
+            });
+          }
+        })
+        .catch(() => {
+          clearInvitationToken();
+          store.dispatch(
+            showError(translate('Invitation is not valid anymore.')),
+          );
           router.stateService.go('profile.details');
         });
-      })
-      .catch(() => {
-        clearInvitationToken();
-        store.dispatch(
-          showError(translate('Invitation is not valid anymore.')),
-        );
-        router.stateService.go('profile.details');
-      });
+    } else {
+      return confirmInvitation(token, invitationType)
+        .then((replaceEmail) => {
+          acceptInvitation(token, replaceEmail).then(() => {
+            router.stateService.go('profile.details');
+          });
+        })
+        .catch(() => {
+          clearInvitationToken();
+          store.dispatch(
+            showError(translate('Invitation is not valid anymore.')),
+          );
+          router.stateService.go('profile.details');
+        });
+    }
   } else {
     setInvitationToken(token);
     router.stateService.go('login');
@@ -69,16 +99,69 @@ export function acceptInvitation(token, replaceEmail) {
     });
 }
 
-export function confirmInvitation(token) {
+export function acceptGroupRequest(token) {
+  return InvitationService.acceptRequest(token)
+    .then(() => {
+      store.dispatch(showSuccess(translate('Your invitation was accepted.')));
+      clearInvitationToken();
+    })
+    .catch(({ response }) => {
+      if (response.status === 404) {
+        store.dispatch(showError(translate('Invitation is not found.')));
+      } else if (response.status === 400) {
+        clearInvitationToken();
+        store.dispatch(showError(translate('Invitation is not valid.')));
+      } else if (response.status === 500) {
+        store.dispatch(
+          showError(
+            translate(
+              'Internal server error occurred. Please try again or contact support.',
+            ),
+          ),
+        );
+      }
+    });
+}
+
+export function rejectGroupRequest(token) {
+  return InvitationService.rejectRequest(token)
+    .then(() => {
+      store.dispatch(showSuccess(translate('Your invitation was rejected.')));
+      clearInvitationToken();
+    })
+    .catch(({ response }) => {
+      if (response.status === 404) {
+        store.dispatch(showError(translate('Invitation is not found.')));
+      } else if (response.status === 400) {
+        clearInvitationToken();
+        store.dispatch(showError(translate('Invitation is not valid.')));
+      } else if (response.status === 500) {
+        store.dispatch(
+          showError(
+            translate(
+              'Internal server error occurred. Please try again or contact support.',
+            ),
+          ),
+        );
+      }
+    });
+}
+
+export function confirmInvitation(token, invitationType) {
   const deferred = createDeferred();
   store.dispatch(
-    openModalDialog(InvitationConfirmDialog, {
-      resolve: {
-        token,
-        deferred,
+    openModalDialog(
+      invitationType === 'user-group-request'
+        ? GroupInvitationsConfirmDialog
+        : InvitationConfirmDialog,
+      {
+        resolve: {
+          token,
+          deferred,
+        },
+        backdrop: 'static',
       },
-      backdrop: 'static',
-    }),
+    ),
   );
   return deferred.promise;
 }

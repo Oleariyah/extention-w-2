@@ -126,7 +126,11 @@ export function attachTransitions() {
 
   router.transitionService.onSuccess({}, (transition) => {
     if (AuthService.isAuthenticated() && !transition.to().data?.skipAuth) {
-      tryAcceptInvitation();
+      const invitationType =
+        router.urlService.path().split('/')[1] === 'user-group-invitations'
+          ? 'user-group-request'
+          : '';
+      tryAcceptInvitation(invitationType);
     }
   });
 
