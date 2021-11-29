@@ -26,46 +26,46 @@ const GroupInvitationsConfirmDialog = lazyComponent(
   'GroupInvitationsConfirmDialog',
 );
 
-export function checkAndAccept(token, invitationType = '') {
+export function checkAndAccept(token) {
   /*
      Call confirm token dialog, accept it and redirect user to profile.
      If user is not logged in - set token and redirect user to registration.
      If user is logged in and token is not valid - clear the token and redirect to user profile with the error message.
      */
   if (AuthService.isAuthenticated()) {
-    if (invitationType === 'user-group-request') {
-      return confirmInvitation(token, invitationType)
-        .then((accept) => {
-          if (accept) {
-            acceptGroupRequest(token).then(() => {
-              router.stateService.go('profile.details');
-            });
-          } else {
-            rejectGroupRequest(token).then(() => {
-              router.stateService.go('profile.details');
-            });
-          }
-        })
-        .catch(() => {
+    return confirmInvitation(token)
+      .then((replaceEmail) => {
+        acceptInvitation(token, replaceEmail).then(() => {
           router.stateService.go('profile.details');
         });
-    } else {
-      return confirmInvitation(token, invitationType)
-        .then((replaceEmail) => {
-          acceptInvitation(token, replaceEmail).then(() => {
-            router.stateService.go('profile.details');
-          });
-        })
-        .catch(() => {
-          clearInvitationToken();
-          store.dispatch(
-            showError(translate('Invitation is not valid anymore.')),
-          );
-          router.stateService.go('profile.details');
-        });
-    }
+      })
+      .catch(() => {
+        clearInvitationToken();
+        store.dispatch(
+          showError(translate('Invitation is not valid anymore.')),
+        );
+        router.stateService.go('profile.details');
+      });
   } else {
     setInvitationToken(token);
+    router.stateService.go('login');
+  }
+}
+
+export function checkAndAcceptGroupInvite(token) {
+  if (AuthService.isAuthenticated()) {
+    return confirmUserGroupInvitation(token)
+      .then((accept) => {
+        if (accept) {
+          acceptGroupRequest(token).then(() => {
+            router.stateService.go('profile.details');
+          });
+        }
+      })
+      .catch(() => {
+        router.stateService.go('profile.details');
+      });
+  } else {
     router.stateService.go('login');
   }
 }
@@ -117,43 +117,30 @@ export function acceptGroupRequest(token) {
     });
 }
 
-export function rejectGroupRequest(token) {
-  return InvitationService.rejectRequest(token)
-    .then(() => {
-      store.dispatch(showSuccess(translate('Your invitation was rejected.')));
-    })
-    .catch(({ response }) => {
-      if (response.status === 404) {
-        store.dispatch(showError(translate('Invitation is not found.')));
-      } else if (response.status === 400) {
-        store.dispatch(showError(translate('Invitation is not valid.')));
-      } else if (response.status === 500) {
-        store.dispatch(
-          showError(
-            translate(
-              'Internal server error occurred. Please try again or contact support.',
-            ),
-          ),
-        );
-      }
-    });
-}
-
-export function confirmInvitation(token, invitationType) {
+export function confirmInvitation(token) {
   const deferred = createDeferred();
   store.dispatch(
-    openModalDialog(
-      invitationType === 'user-group-request'
-        ? GroupInvitationsConfirmDialog
-        : InvitationConfirmDialog,
-      {
-        resolve: {
-          token,
-          deferred,
-        },
-        backdrop: 'static',
+    openModalDialog(InvitationConfirmDialog, {
+      resolve: {
+        token,
+        deferred,
       },
-    ),
+      backdrop: 'static',
+    }),
+  );
+  return deferred.promise;
+}
+
+export function confirmUserGroupInvitation(token) {
+  const deferred = createDeferred();
+  store.dispatch(
+    openModalDialog(GroupInvitationsConfirmDialog, {
+      resolve: {
+        token,
+        deferred,
+      },
+      backdrop: 'static',
+    }),
   );
   return deferred.promise;
 }

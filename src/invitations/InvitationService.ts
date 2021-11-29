@@ -22,13 +22,7 @@ class InvitationServiceClass {
   }
 
   acceptRequest(uuid) {
-    // eslint-disable-next-line no-console
-    console.log('acceptRequest', uuid);
     return post(`/user-group-invitations/${uuid}/request/`, {});
-  }
-
-  rejectRequest(uuid) {
-    return post(`/user-group-invitations/${uuid}/cancel/`, {});
   }
 
   cancel(invitation_uuid) {

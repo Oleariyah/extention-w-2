@@ -25,6 +25,6 @@ export const GroupInvitationMessage: FunctionComponent<{
         },
       )}
     </p>
-    {translate('Do you want to request confirmation?')}
+    {translate('Do you want to submit permission request?')}
   </>
 );

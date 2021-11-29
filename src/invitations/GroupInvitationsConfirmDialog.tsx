@@ -8,9 +8,9 @@ import {
 import { useDispatch } from 'react-redux';
 import { useAsync } from 'react-use';
 
+import { LoadingSpinner } from '@waldur/core/LoadingSpinner';
 import { translate } from '@waldur/i18n';
 import { closeModalDialog } from '@waldur/modal/actions';
-import { LoadingSpinner } from '@waldur/table/TableLoadingSpinnerContainer';
 
 import { GroupInvitationButtons } from './GroupinvitationButtons';
 import { GroupInvitationErrorMessage } from './GroupInvitationErrorMessage';
@@ -29,7 +29,7 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
     close();
   }, [close, deferred]);
 
-  const acceptRequest = useCallback(() => {
+  const submitRequest = useCallback(() => {
     close();
     deferred.resolve(true);
   }, [close, deferred]);
@@ -67,7 +67,7 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
         {!asyncResult.loading && !asyncResult.error && (
           <GroupInvitationButtons
             dismiss={dismiss}
-            acceptRequest={acceptRequest}
+            submitRequest={submitRequest}
           />
         )}
       </ModalFooter>
