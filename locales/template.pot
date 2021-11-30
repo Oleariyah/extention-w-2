@@ -67,10 +67,6 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#: src/invitations/GroupinvitationButtons.tsx
-msgid "Accept Request"
-msgstr ""
-
 #: src/booking/AcceptAction.tsx
 msgid "Accept booking"
 msgstr ""
@@ -2307,7 +2303,7 @@ msgid "Do you really want to delete comment?"
 msgstr ""
 
 #: src/invitations/GroupInvitationMessage.tsx
-msgid "Do you want to request confirmation?"
+msgid "Do you want to submit permission request?"
 msgstr ""
 
 #: src/rancher/node/actions/UnlinkAction.tsx
@@ -3133,6 +3129,7 @@ msgstr ""
 msgid "Go to my profile"
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "Go to profile"
 msgstr ""
@@ -3577,6 +3574,7 @@ msgstr ""
 msgid "Invitation is not found."
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "Invitation is not valid"
 msgstr ""
@@ -5688,6 +5686,7 @@ msgstr ""
 msgid "Please enter volume size to see price estimate."
 msgstr ""
 
+#: src/invitations/GroupInvitationsConfirmDialog.tsx
 #: src/invitations/InvitationConfirmDialog.tsx
 msgid "Please give us a moment to validate your invitation."
 msgstr ""
@@ -6493,10 +6492,6 @@ msgstr ""
 #: src/marketplace/orders/item/list/OrderItemRejectButton.tsx
 #: src/marketplace/orders/item/list/SupportOrderItemRejectButton.tsx
 msgid "Reject"
-msgstr ""
-
-#: src/invitations/GroupinvitationButtons.tsx
-msgid "Reject Request"
 msgstr ""
 
 #: src/invitations/UserPermissionRequestRejectButton.tsx
@@ -8205,6 +8200,10 @@ msgstr ""
 #: src/resource/actions/ResourceActionDialog.tsx
 #: src/user/support/UserEmailChangeDialog.tsx
 msgid "Submit"
+msgstr ""
+
+#: src/invitations/GroupinvitationButtons.tsx
+msgid "Submit Request"
 msgstr ""
 
 #: src/slurm/details/SubmitJobAction.tsx
@@ -10811,6 +10810,7 @@ msgid "You will be redirected in a moment."
 msgstr ""
 
 #: src/error/InvalidObjectPage.tsx
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "You've either entered invalid URL or don't have enough permissions to view this page."
 msgstr ""
@@ -10846,10 +10846,6 @@ msgstr ""
 
 #: src/invitations/utils.ts
 msgid "Your invitation was accepted."
-msgstr ""
-
-#: src/invitations/utils.ts
-msgid "Your invitation was rejected."
 msgstr ""
 
 #: src/project/ProjectTablePlaceholder.tsx
@@ -11071,6 +11067,7 @@ msgstr ""
 msgid "order items"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 #: src/navigation/workspace/CreateOrganizationButton.tsx
 msgid "organization"
@@ -11112,6 +11109,7 @@ msgstr ""
 msgid "ports"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 msgid "project"
 msgstr ""
@@ -11436,6 +11434,7 @@ msgstr ""
 msgid "{role} in {project}"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 msgid "{sender} has invited you to join {name} {type} in {role} role."
 msgstr ""
