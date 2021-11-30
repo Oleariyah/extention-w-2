@@ -5686,7 +5686,7 @@ msgstr ""
 msgid "Please enter volume size to see price estimate."
 msgstr ""
 
-#: src/invitations/GroupInvitationsConfirmDialog.tsx
+#: src/invitations/GroupInvitationConfirmDialog.tsx
 #: src/invitations/InvitationConfirmDialog.tsx
 msgid "Please give us a moment to validate your invitation."
 msgstr ""
@@ -6730,7 +6730,7 @@ msgstr ""
 msgid "Request limits change"
 msgstr ""
 
-#: src/invitations/GroupInvitationsConfirmDialog.tsx
+#: src/invitations/GroupInvitationConfirmDialog.tsx
 msgid "Request permission"
 msgstr ""
 
@@ -10850,6 +10850,10 @@ msgstr ""
 
 #: src/project/ProjectTablePlaceholder.tsx
 msgid "Your organization does not have any projects yet."
+msgstr ""
+
+#: src/invitations/utils.ts
+msgid "Your permission request has been submitted."
 msgstr ""
 
 #: src/auth/AuthHeader.tsx
