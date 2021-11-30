@@ -6,7 +6,7 @@ import { ENV } from '@waldur/configs/default';
 import { LoadingSpinner } from '@waldur/core/LoadingSpinner';
 import { translate } from '@waldur/i18n';
 
-import { checkAndAcceptGroupInvite } from './utils';
+import { submitPermissionRequest } from './utils';
 
 export const UserGroupInvitation: FunctionComponent = () => {
   const router = useRouter();
@@ -19,7 +19,7 @@ export const UserGroupInvitation: FunctionComponent = () => {
       router.stateService.go('errorPage.notFound');
       return;
     }
-    checkAndAcceptGroupInvite(token);
+    submitPermissionRequest(token);
   });
 
   return (

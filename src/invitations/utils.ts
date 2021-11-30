@@ -52,12 +52,12 @@ export function checkAndAccept(token) {
   }
 }
 
-export function checkAndAcceptGroupInvite(token) {
+export function submitPermissionRequest(token) {
   if (AuthService.isAuthenticated()) {
     return confirmUserGroupInvitation(token)
       .then((accept) => {
         if (accept) {
-          acceptGroupRequest(token).then(() => {
+          submitGroupRequest(token).then(() => {
             router.stateService.go('profile.details');
           });
         }
@@ -95,8 +95,8 @@ export function acceptInvitation(token, replaceEmail) {
     });
 }
 
-export function acceptGroupRequest(token) {
-  return InvitationService.acceptRequest(token)
+export function submitGroupRequest(token) {
+  return InvitationService.submitRequest(token)
     .then(() => {
       store.dispatch(showSuccess(translate('Your invitation was accepted.')));
     })

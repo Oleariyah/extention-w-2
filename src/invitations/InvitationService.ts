@@ -21,7 +21,7 @@ class InvitationServiceClass {
     });
   }
 
-  acceptRequest(uuid) {
+  submitRequest(uuid) {
     return post(`/user-group-invitations/${uuid}/request/`, {});
   }
 

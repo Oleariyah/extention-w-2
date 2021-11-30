@@ -43,7 +43,7 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
   return (
     <>
       <ModalHeader>
-        <ModalTitle>{translate('Request Permission')}</ModalTitle>
+        <ModalTitle>{translate('Request permission')}</ModalTitle>
       </ModalHeader>
       <ModalBody>
         {asyncResult.loading && (
