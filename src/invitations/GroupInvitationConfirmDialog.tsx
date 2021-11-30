@@ -35,7 +35,9 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
   }, [close, deferred]);
 
   const asyncResult = useAsync(() =>
-    InvitationService.userGroupDetails(token).then((response) => response.data),
+    InvitationService.fetchGroupDetails(token).then(
+      (response) => response.data,
+    ),
   );
 
   const invitation = asyncResult.value;

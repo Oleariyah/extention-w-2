@@ -18,12 +18,12 @@ const InvitationConfirmDialog = lazyComponent(
   'InvitationConfirmDialog',
 );
 
-const GroupInvitationsConfirmDialog = lazyComponent(
+const GroupInvitationConfirmDialog = lazyComponent(
   () =>
     import(
-      /* webpackChunkName: "GroupInvitationsConfirmDialog" */ './GroupInvitationsConfirmDialog'
+      /* webpackChunkName: "GroupInvitationConfirmDialog" */ './GroupInvitationConfirmDialog'
     ),
-  'GroupInvitationsConfirmDialog',
+  'GroupInvitationConfirmDialog',
 );
 
 export function checkAndAccept(token) {
@@ -98,7 +98,9 @@ export function acceptInvitation(token, replaceEmail) {
 export function submitGroupRequest(token) {
   return InvitationService.submitRequest(token)
     .then(() => {
-      store.dispatch(showSuccess(translate('Your invitation was accepted.')));
+      store.dispatch(
+        showSuccess(translate('Your permission request has been submitted.')),
+      );
     })
     .catch(({ response }) => {
       if (response.status === 404) {
@@ -134,7 +136,7 @@ export function confirmInvitation(token) {
 export function confirmUserGroupInvitation(token) {
   const deferred = createDeferred();
   store.dispatch(
-    openModalDialog(GroupInvitationsConfirmDialog, {
+    openModalDialog(GroupInvitationConfirmDialog, {
       resolve: {
         token,
         deferred,

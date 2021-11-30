@@ -41,8 +41,8 @@ export const states: StateDeclaration[] = [
     component: InvitationReject,
   },
   {
-    name: 'user-group-invitations',
-    url: '/user-group-invitations/:token',
+    name: 'user-group-invitation',
+    url: '/user-group-invitation/:token',
     component: UserGroupInvitation,
   },
 ];
