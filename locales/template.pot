@@ -6672,10 +6672,6 @@ msgstr ""
 msgid "Request"
 msgstr ""
 
-#: src/invitations/GroupInvitationsConfirmDialog.tsx
-msgid "Request Permission"
-msgstr ""
-
 #: src/user/support/UserRemovalMessageDialog.tsx
 msgid "Request account removal for {userName}."
 msgstr ""
@@ -6732,6 +6728,10 @@ msgstr ""
 
 #: src/slurm/RequestLimitsChangeAction.tsx
 msgid "Request limits change"
+msgstr ""
+
+#: src/invitations/GroupInvitationsConfirmDialog.tsx
+msgid "Request permission"
 msgstr ""
 
 #: src/marketplace/offerings/actions/OfferingItemActions.tsx
