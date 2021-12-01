@@ -62,6 +62,12 @@ module.exports = {
                       libraryName: 'react-use',
                       camel2DashComponentName: false,
                     },
+                    {
+                      style: false,
+                      libraryName: 'lodash',
+                      libraryDirectory: null,
+                      camel2DashComponentName: false,
+                    },
                   ]),
                 ],
               }),
@@ -204,6 +210,10 @@ module.exports = {
           from: path.resolve(imagesPath, './favicon.ico'),
           to: utils.formatPath('images/favicon.ico'),
           toType: 'file',
+        },
+        {
+          from: path.resolve(imagesPath, './login_logo.png'),
+          to: utils.formatPath('images/login_logo.png'),
         },
       ],
     }),

@@ -112,6 +112,7 @@ msgstr ""
 #: src/invoices/utils.ts
 #: src/marketplace/offerings/create/AccountingSummary.tsx
 #: src/marketplace/offerings/create/OfferingCreateDialog.tsx
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
 msgid "Accounting"
 msgstr ""
 
@@ -1167,6 +1168,7 @@ msgstr ""
 #: src/booking/CancelAction.tsx
 #: src/form/ListDialog.tsx
 #: src/invitations/GroupInvitationCancelButton.tsx
+#: src/invitations/GroupinvitationButtons.tsx
 #: src/invitations/actions/InvitationCancelButton.tsx
 #: src/issues/comments/IssueCommentsForm.tsx
 #: src/marketplace-flows/FlowCancelAction.tsx
@@ -1621,7 +1623,7 @@ msgid "Contract sum"
 msgstr ""
 
 #: src/invoices/list/AgreementInfo.tsx
-msgid "Contract sum is"
+msgid "Contract sum is {sum}."
 msgstr ""
 
 #: src/rancher/cluster/create/NodeRoleField.tsx
@@ -1948,6 +1950,22 @@ msgstr ""
 msgid "Customer support satisfaction overall rating"
 msgstr ""
 
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
+msgid "Customize name, description and terms of service"
+msgstr ""
+
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
+msgid "Customize offering category and attributes"
+msgstr ""
+
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
+msgid "Customize plans and plan components"
+msgstr ""
+
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
+msgid "Customize service settings"
+msgstr ""
+
 #: src/openstack/openstack-subnet/fields.tsx
 msgid "DNS name servers"
 msgstr ""
@@ -2114,10 +2132,12 @@ msgstr ""
 #: src/marketplace/offerings/create/OverviewStep.tsx
 #: src/marketplace/offerings/create/OverviewSummary.tsx
 #: src/marketplace/offerings/details/PublicOfferingDescriptionContainer.tsx
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
 #: src/marketplace/offerings/images/CreateImageDialog.tsx
 #: src/marketplace/offerings/images/OfferingImagesList.tsx
 #: src/marketplace/offerings/option/OptionForm.tsx
 #: src/marketplace/offerings/plan/PlanForm.tsx
+#: src/marketplace/offerings/service-providers/ServiceProviderEditor.tsx
 #: src/marketplace/orders/item/details/OrderItemDetails.tsx
 #: src/marketplace/resources/usage/utils.ts
 #: src/openstack/openstack-backup/BackupSnapshotsList.tsx
@@ -2297,6 +2317,10 @@ msgstr ""
 msgid "Do you really want to delete comment?"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
+msgid "Do you want to submit permission request?"
+msgstr ""
+
 #: src/rancher/node/actions/UnlinkAction.tsx
 msgid "Do you want to unlink instance {name}?"
 msgstr ""
@@ -2396,6 +2420,8 @@ msgstr ""
 #: src/customer/team/UserEditButton.tsx
 #: src/marketplace-flows/FlowEditAction.tsx
 #: src/marketplace/offerings/actions/OfferingItemActions.tsx
+#: src/marketplace/offerings/details/PublicOfferingEditorButton.tsx
+#: src/marketplace/offerings/service-providers/ServiceProviderEditorButton.tsx
 #: src/marketplace/orders/item/details/OrderItem.tsx
 #: src/marketplace/resources/actions/EditAction.tsx
 #: src/openstack/openstack-backup-schedule/actions/EditAction.tsx
@@ -2439,25 +2465,16 @@ msgstr ""
 msgid "Edit confirmation message of {offeringName}"
 msgstr ""
 
-#: src/marketplace/resources/actions/EditResourceEndDateAction.tsx
-#: src/marketplace/resources/actions/EditResourceEndDateByProviderAction.tsx
-msgid "Edit end date"
-msgstr ""
-
-#: src/marketplace/resources/actions/EditResourceEndDateByStaffAction.tsx
-msgid "Edit end date (staff)"
-msgstr ""
-
-#: src/marketplace/resources/actions/EditResourceEndDateDialog.tsx
-msgid "Edit end date of {resourceName}"
-msgstr ""
-
 #: src/invoices/details/InvoiceItemUpdate.tsx
 msgid "Edit item"
 msgstr ""
 
 #: src/marketplace/offerings/actions/UpdateOfferingAttributesDialog.tsx
 msgid "Edit offering"
+msgstr ""
+
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
+msgid "Edit offering details"
 msgstr ""
 
 #: src/marketplace/details/CustomerCreateGroup.tsx
@@ -2478,6 +2495,10 @@ msgstr ""
 
 #: src/project/ProjectCreateForm.tsx
 msgid "Edit request"
+msgstr ""
+
+#: src/marketplace/offerings/service-providers/ServiceProviderEditor.tsx
+msgid "Edit service provider details"
 msgstr ""
 
 #: src/customer/team/EditTeamMemberDialog.tsx
@@ -2575,14 +2596,10 @@ msgstr ""
 
 #: src/customer/payment-profiles/PaymentProfileCreateContainer.tsx
 #: src/customer/payment-profiles/PaymentProfileUpdateDialog.tsx
-#: src/marketplace-flows/ProjectCreateExpandableRow.tsx
-#: src/marketplace-flows/ResourceCreateExpandableRow.tsx
-#: src/marketplace/resources/actions/EditResourceEndDateDialog.tsx
-#: src/marketplace/resources/list/ExpandableResourceSummary.tsx
 #: src/project/ProjectCreateForm.tsx
+#: src/project/ProjectDetails.tsx
 #: src/project/ProjectUpdateForm.tsx
 #: src/project/ProjectsList.tsx
-#: src/resource/summary/ResourceSummaryBase.tsx
 msgid "End date"
 msgstr ""
 
@@ -2591,7 +2608,7 @@ msgid "End date must be after start date."
 msgstr ""
 
 #: src/invoices/list/AgreementInfo.tsx
-msgid "End date of the agreement is"
+msgid "End date of the agreement is {date}."
 msgstr ""
 
 #: src/invoices/details/ResourceLimitPeriodsTable.tsx
@@ -3120,6 +3137,7 @@ msgstr ""
 msgid "Go to my profile"
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "Go to profile"
 msgstr ""
@@ -3585,10 +3603,6 @@ msgstr ""
 msgid "Invitation rejection"
 msgstr ""
 
-#: src/auth/useAuthFeatures.ts
-msgid "Invitation token is not found."
-msgstr ""
-
 #: src/customer/team/CustomerTeam.tsx
 msgid "Invitations"
 msgstr ""
@@ -3918,7 +3932,7 @@ msgid "Loading actions"
 msgstr ""
 
 #: src/LoadingScreen.tsx
-msgid "Loading assets, please wait."
+msgid "Loading assets"
 msgstr ""
 
 #: src/customer/payments/InvoicesDropdown.tsx
@@ -4043,6 +4057,7 @@ msgstr ""
 
 #: src/marketplace/offerings/create/ManagementSummary.tsx
 #: src/marketplace/offerings/create/OfferingCreateDialog.tsx
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
 msgid "Management"
 msgstr ""
 
@@ -4526,7 +4541,7 @@ msgstr ""
 
 #: src/customer/create/CustomerCreateForm.tsx
 #: src/marketplace/offerings/create/WizardButtons.tsx
-#: src/marketplace/offerings/service-providers/shared/grid/GridPagination.tsx
+#: src/marketplace/offerings/service-providers/shared/grid/NextPage.tsx
 #: src/table/TablePagination.tsx
 msgid "Next"
 msgstr ""
@@ -4583,6 +4598,10 @@ msgstr ""
 
 #: src/customer/list/CustomerExpandableRow.tsx
 msgid "No invoice data available."
+msgstr ""
+
+#: src/navigation/SearchResultsDropdown.tsx
+msgid "No matching offerings found"
 msgstr ""
 
 #: src/marketplace/landing/LandingPage.tsx
@@ -4820,6 +4839,7 @@ msgid "Offering has been imported."
 msgstr ""
 
 #: src/marketplace/offerings/actions/UpdateOfferingAttributesDialog.tsx
+#: src/marketplace/offerings/details/PageOverview.tsx
 #: src/marketplace/offerings/store/effects.ts
 msgid "Offering has been updated."
 msgstr ""
@@ -5281,6 +5301,8 @@ msgstr ""
 
 #: src/marketplace/offerings/create/OfferingCreateDialog.tsx
 #: src/marketplace/offerings/create/OverviewSummary.tsx
+#: src/marketplace/offerings/details/PageOverview.tsx
+#: src/marketplace/offerings/details/PublicOfferingEditor.tsx
 msgid "Overview"
 msgstr ""
 
@@ -5366,6 +5388,10 @@ msgstr ""
 #: src/marketplace/offerings/OfferingStateCell.tsx
 #: src/marketplace/offerings/OfferingStateFilter.tsx
 msgid "Paused"
+msgstr ""
+
+#: src/invoices/details/InvoicePayButton.tsx
+msgid "Pay"
 msgstr ""
 
 #: src/paypal/InvoiceActions.tsx
@@ -5678,6 +5704,7 @@ msgstr ""
 msgid "Please enter volume size to see price estimate."
 msgstr ""
 
+#: src/invitations/GroupInvitationConfirmDialog.tsx
 #: src/invitations/InvitationConfirmDialog.tsx
 msgid "Please give us a moment to validate your invitation."
 msgstr ""
@@ -5759,10 +5786,6 @@ msgstr ""
 
 #: src/marketplace/offerings/create/AccountingStep.tsx
 msgid "Please select type in Management tab first."
-msgstr ""
-
-#: src/i18n/LanguageList.tsx
-msgid "Please select your language"
 msgstr ""
 
 #: src/openstack/openstack-instance/actions/RestartAction.tsx
@@ -5850,7 +5873,7 @@ msgid "Preview offering"
 msgstr ""
 
 #: src/customer/create/WizardForm.tsx
-#: src/marketplace/offerings/service-providers/shared/grid/GridPagination.tsx
+#: src/marketplace/offerings/service-providers/shared/grid/PrevPage.tsx
 #: src/table/TablePagination.tsx
 msgid "Previous"
 msgstr ""
@@ -6717,8 +6740,17 @@ msgstr ""
 msgid "Request for a termination"
 msgstr ""
 
+#: src/invitations/GroupInvitationErrorMessage.tsx
+#: src/invitations/utils.ts
+msgid "Request is not valid."
+msgstr ""
+
 #: src/slurm/RequestLimitsChangeAction.tsx
 msgid "Request limits change"
+msgstr ""
+
+#: src/invitations/GroupInvitationConfirmDialog.tsx
+msgid "Request permission"
 msgstr ""
 
 #: src/marketplace/offerings/actions/OfferingItemActions.tsx
@@ -7072,6 +7104,7 @@ msgstr ""
 
 #: src/LoadingScreen.tsx
 #: src/invoices/events/InvoiceEventsDialog.tsx
+#: src/navigation/SearchResultsDropdown.tsx
 msgid "Retry"
 msgstr ""
 
@@ -7127,11 +7160,13 @@ msgid "Revoke"
 msgstr ""
 
 #: src/customer/team/ProjectsListGroup.tsx
+#: src/invitations/GroupInvitationsList.tsx
 #: src/invitations/InvitationsList.tsx
 #: src/invitations/actions/RoleGroup.tsx
 #: src/project/team/AddProjectUserDialog.tsx
 #: src/project/team/RoleGroup.tsx
 #: src/rancher/cluster/create/NodeRoleGroup.tsx
+#: src/user/UserPermissionRequestsList.tsx
 #: src/user/dashboard/ProjectPermissions.tsx
 #: src/user/support/UserFilter.tsx
 msgid "Role"
@@ -7320,7 +7355,7 @@ msgstr ""
 msgid "Search for offering by name"
 msgstr ""
 
-#: src/navigation/AnonymousHeader.tsx
+#: src/navigation/OfferingSearchField.tsx
 msgid "Search for offerings and providers"
 msgstr ""
 
@@ -7705,6 +7740,10 @@ msgstr ""
 msgid "Service provider has been registered."
 msgstr ""
 
+#: src/marketplace/offerings/service-providers/ServiceProviderEditor.tsx
+msgid "Service provider has been updated."
+msgstr ""
+
 #: src/marketplace/offerings/service-providers/ServiceProviderOfferingsGrid.tsx
 msgid "Service provider offerings"
 msgstr ""
@@ -7796,6 +7835,19 @@ msgstr ""
 
 #: src/openstack/openstack-tenant/SetRoutersButton.tsx
 msgid "Set static routes"
+msgstr ""
+
+#: src/marketplace/resources/actions/EditResourceEndDateAction.tsx
+#: src/marketplace/resources/actions/EditResourceEndDateByProviderAction.tsx
+msgid "Set termination date"
+msgstr ""
+
+#: src/marketplace/resources/actions/EditResourceEndDateByStaffAction.tsx
+msgid "Set termination date (staff)"
+msgstr ""
+
+#: src/marketplace/resources/actions/EditResourceEndDateDialog.tsx
+msgid "Set termination date of {resourceName}"
 msgstr ""
 
 #: src/marketplace/offerings/actions/OfferingItemActions.tsx
@@ -8160,6 +8212,7 @@ msgstr ""
 #: src/customer/payments/PaymentCreateDialog.tsx
 #: src/customer/team/OfferingPermissionCreateDialog.tsx
 #: src/digitalocean/DropletResizeDialog.tsx
+#: src/invitations/GroupinvitationButtons.tsx
 #: src/invitations/PermissionRequestActionDialog.tsx
 #: src/invitations/actions/GroupInvitationCreateDialog.tsx
 #: src/invoices/list/MarkAsPaidDialog.tsx
@@ -8472,6 +8525,19 @@ msgstr ""
 #: src/marketplace/orders/item/list/OrderItemStateCell.tsx
 #: src/marketplace/resources/list/ResourceStateFilter.tsx
 msgid "Terminating"
+msgstr ""
+
+#: src/marketplace-flows/ProjectCreateExpandableRow.tsx
+#: src/marketplace-flows/ResourceCreateExpandableRow.tsx
+#: src/marketplace/resources/ResourceSummary.tsx
+#: src/marketplace/resources/actions/EditResourceEndDateDialog.tsx
+#: src/marketplace/resources/list/ExpandableResourceSummary.tsx
+#: src/resource/summary/ResourceSummaryBase.tsx
+msgid "Termination date"
+msgstr ""
+
+#: src/marketplace/resources/list/EndDateTooltip.tsx
+msgid "Termination date: {date}"
 msgstr ""
 
 #: src/marketplace/offerings/details/PublicOfferingDescriptionContainer.tsx
@@ -9208,6 +9274,10 @@ msgstr ""
 msgid "Unable to fetch data."
 msgstr ""
 
+#: src/navigation/SearchResultsDropdown.tsx
+msgid "Unable to fetch offerings"
+msgstr ""
+
 #: src/issues/comments/utils.ts
 msgid "Unable to find:"
 msgstr ""
@@ -9787,6 +9857,7 @@ msgstr ""
 msgid "Unable to update offering state."
 msgstr ""
 
+#: src/marketplace/offerings/details/PageOverview.tsx
 #: src/marketplace/offerings/store/effects.ts
 msgid "Unable to update offering."
 msgstr ""
@@ -9819,6 +9890,10 @@ msgstr ""
 msgid "Unable to update security groups of OpenStack instance."
 msgstr ""
 
+#: src/marketplace/offerings/service-providers/ServiceProviderEditor.tsx
+msgid "Unable to update service provider."
+msgstr ""
+
 #: src/marketplace/cart/store/effects.ts
 msgid "Unable to update shopping cart item."
 msgstr ""
@@ -9842,10 +9917,6 @@ msgstr ""
 
 #: src/customer/details/store/effects.ts
 msgid "Unable to upload logo."
-msgstr ""
-
-#: src/auth/useAuthFeatures.ts
-msgid "Unable to validate invitation token."
 msgstr ""
 
 #: src/booking/BookingStateField.tsx
@@ -9927,12 +9998,13 @@ msgstr ""
 msgid "Unpublish as Google Calendar"
 msgstr ""
 
-#: src/customer/details/CustomerEditDetailsForm.tsx
 #: src/customer/list/OrganizationUpdate.tsx
 #: src/customer/payment-profiles/PaymentProfileUpdateDialog.tsx
 #: src/customer/payments/PaymentUpdateDialog.tsx
 #: src/customer/team/UpdateOfferingPermissionExpirationTimeDialog.tsx
 #: src/marketplace/cart/ShoppingCartUpdateButton.tsx
+#: src/marketplace/offerings/details/PageOverview.tsx
+#: src/marketplace/offerings/service-providers/ServiceProviderEditor.tsx
 #: src/marketplace/offerings/update/OfferingUpdateDialog.tsx
 #: src/marketplace/orders/item/list/OrderItemTypeCell.tsx
 #: src/marketplace/orders/item/list/OrderTypeFilter.tsx
@@ -10072,7 +10144,7 @@ msgstr ""
 msgid "Updating security groups"
 msgstr ""
 
-#: src/customer/details/CustomerEditDetailsForm.tsx
+#: src/customer/details/CustomerLogoUpdate.tsx
 msgid "Upload new"
 msgstr ""
 
@@ -10790,10 +10862,12 @@ msgid "You need approval to finish purchasing of services."
 msgstr ""
 
 #: src/invitations/InvitationAccept.tsx
+#: src/invitations/UserGroupInvitation.tsx
 msgid "You will be redirected in a moment."
 msgstr ""
 
 #: src/error/InvalidObjectPage.tsx
+#: src/invitations/GroupInvitationErrorMessage.tsx
 #: src/invitations/InvitationErrorMessage.tsx
 msgid "You've either entered invalid URL or don't have enough permissions to view this page."
 msgstr ""
@@ -10832,6 +10906,14 @@ msgstr ""
 
 #: src/project/ProjectTablePlaceholder.tsx
 msgid "Your organization does not have any projects yet."
+msgstr ""
+
+#: src/invitations/utils.ts
+msgid "Your permission request has been submitted."
+msgstr ""
+
+#: src/invitations/UserGroupInvitation.tsx
+msgid "Your request is being processed."
 msgstr ""
 
 #: src/auth/AuthHeader.tsx
@@ -11049,6 +11131,7 @@ msgstr ""
 msgid "order items"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 #: src/navigation/workspace/CreateOrganizationButton.tsx
 msgid "organization"
@@ -11090,6 +11173,7 @@ msgstr ""
 msgid "ports"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 msgid "project"
 msgstr ""
@@ -11414,6 +11498,7 @@ msgstr ""
 msgid "{role} in {project}"
 msgstr ""
 
+#: src/invitations/GroupInvitationMessage.tsx
 #: src/invitations/InvitationMessage.tsx
 msgid "{sender} has invited you to join {name} {type} in {role} role."
 msgstr ""
