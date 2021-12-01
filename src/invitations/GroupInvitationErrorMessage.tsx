@@ -8,7 +8,7 @@ const Illustration = require('@waldur/images/table-placeholders/undraw_empty_xct
 export const GroupInvitationErrorMessage = ({ dismiss }) => (
   <ImageTablePlaceholder
     illustration={Illustration}
-    title={translate('Invitation is not valid')}
+    title={translate('Request is not valid.')}
     description={translate(
       `You've either entered invalid URL or don't have enough permissions to view this page.`,
     )}

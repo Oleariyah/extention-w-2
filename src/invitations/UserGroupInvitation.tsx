@@ -26,7 +26,7 @@ export const UserGroupInvitation: FunctionComponent = () => {
     <div className="invitation-vertical-center">
       <div className="container">
         <LoadingSpinner />
-        <p>{translate('Your invitation is being processed.')}</p>
+        <p>{translate('Your request is being processed.')}</p>
         <p>{translate('You will be redirected in a moment.')}</p>
       </div>
     </div>

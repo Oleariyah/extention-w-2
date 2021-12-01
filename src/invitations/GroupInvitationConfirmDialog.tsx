@@ -1,10 +1,5 @@
 import { useCallback, FunctionComponent } from 'react';
-import {
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  ModalTitle,
-} from 'react-bootstrap';
+import { ModalBody, ModalFooter, ModalHeader } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useAsync } from 'react-use';
 
@@ -17,7 +12,7 @@ import { GroupInvitationErrorMessage } from './GroupInvitationErrorMessage';
 import { GroupInvitationMessage } from './GroupInvitationMessage';
 import { InvitationService } from './InvitationService';
 
-export const GroupInvitationsConfirmDialog: FunctionComponent<{
+export const GroupInvitationConfirmDialog: FunctionComponent<{
   resolve: { token; deferred };
 }> = ({ resolve: { token, deferred } }) => {
   const dispatch = useDispatch();
@@ -35,7 +30,7 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
   }, [close, deferred]);
 
   const asyncResult = useAsync(() =>
-    InvitationService.fetchGroupDetails(token).then(
+    InvitationService.fetchUserGroupInvitationById(token).then(
       (response) => response.data,
     ),
   );
@@ -44,9 +39,7 @@ export const GroupInvitationsConfirmDialog: FunctionComponent<{
 
   return (
     <>
-      <ModalHeader>
-        <ModalTitle>{translate('Request permission')}</ModalTitle>
-      </ModalHeader>
+      <ModalHeader>{translate('Request permission')}</ModalHeader>
       <ModalBody>
         {asyncResult.loading && (
           <>

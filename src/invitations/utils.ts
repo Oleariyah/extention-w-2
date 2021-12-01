@@ -103,10 +103,8 @@ export function submitGroupRequest(token) {
       );
     })
     .catch(({ response }) => {
-      if (response.status === 404) {
-        store.dispatch(showError(translate('Invitation is not found.')));
-      } else if (response.status === 400) {
-        store.dispatch(showError(translate('Invitation is not valid.')));
+      if (response.status === 404 || response.status === 400) {
+        store.dispatch(showError(translate('Request is not valid.')));
       } else if (response.status === 500) {
         store.dispatch(
           showError(
