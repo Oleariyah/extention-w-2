@@ -40,9 +40,10 @@ export const states: StateDeclaration[] = [
     url: '/invitation_reject/:token/',
     component: InvitationReject,
   },
+
   {
     name: 'user-group-invitation',
-    url: '/user-group-invitation/:token',
+    url: '/user-group-invitation/:token/',
     component: UserGroupInvitation,
   },
 ];

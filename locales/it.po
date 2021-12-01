@@ -875,9 +875,6 @@ msgstr "Continua"
 msgid "Contract sum"
 msgstr "Somma del contratto"
 
-msgid "Contract sum is"
-msgstr "La somma del contratto è"
-
 msgid "Control plane"
 msgstr "Piano di controllo"
 
@@ -1354,9 +1351,6 @@ msgstr "Data di fine"
 
 msgid "End date must be after start date."
 msgstr "La data di fine deve essere successiva alla data di inizio."
-
-msgid "End date of the agreement is"
-msgstr "La data di fine dell'accordo è"
 
 msgid "End time"
 msgstr "Ora di fine"
@@ -3199,9 +3193,6 @@ msgstr "Si prega di selezionare il sapore per vedere il preventivo."
 
 msgid "Please select type in Management tab first."
 msgstr "Selezionare prima digitare nella scheda Gestione."
-
-msgid "Please select your language"
-msgstr "Seleziona la tua lingua"
 
 msgid "Please start instance first."
 msgstr "Si prega di avviare prima istanza."

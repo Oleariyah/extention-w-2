@@ -49,7 +49,7 @@ class InvitationServiceClass {
     return get<Invitation>(`/user-invitations/${invitation_uuid}/details/`);
   }
 
-  fetchGroupDetails(invitation_uuid) {
+  fetchUserGroupInvitationById(invitation_uuid) {
     return get<Invitation>(`/user-group-invitations/${invitation_uuid}/`);
   }
 

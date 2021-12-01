@@ -851,9 +851,6 @@ msgstr "Fortsätt"
 msgid "Contract sum"
 msgstr "Kontraktssumma"
 
-msgid "Contract sum is"
-msgstr "Kontraktssumman är"
-
 msgid "Control plane"
 msgstr "Kontrollplan"
 
@@ -1315,9 +1312,6 @@ msgstr "Slutdatum"
 
 msgid "End date must be after start date."
 msgstr "Slutdatum måste vara efter startdatum."
-
-msgid "End date of the agreement is"
-msgstr "Avtalets slutdatum är"
 
 msgid "End time"
 msgstr "Sluttid"
@@ -3133,9 +3127,6 @@ msgstr "Välj smak för att se prisuppskattning."
 
 msgid "Please select type in Management tab first."
 msgstr "Välj typ i fliken Hantering först."
-
-msgid "Please select your language"
-msgstr "Välj ditt språk"
 
 msgid "Please start instance first."
 msgstr "Starta instansen först."
