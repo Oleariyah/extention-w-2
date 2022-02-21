@@ -814,6 +814,7 @@ msgstr ""
 msgid "Attachments"
 msgstr ""
 
+#: src/marketplace/details/OfferingTabs.tsx
 #: src/marketplace/resources/ResourceSummary.tsx
 #: src/marketplace/resources/list/ExpandableResourceSummary.tsx
 msgid "Attributes"
@@ -3880,6 +3881,22 @@ msgstr ""
 msgid "Limit"
 msgstr ""
 
+#: src/marketplace/details/LimitDetail.tsx
+msgid "Limit Amount"
+msgstr ""
+
+#: src/marketplace/details/LimitDetail.tsx
+msgid "Limit Description"
+msgstr ""
+
+#: src/marketplace/details/LimitDetail.tsx
+msgid "Limit Name"
+msgstr ""
+
+#: src/marketplace/details/LimitDetail.tsx
+msgid "Limit Period"
+msgstr ""
+
 #: src/marketplace/offerings/create/ComponentLimitAmountField.tsx
 msgid "Limit amount"
 msgstr ""
@@ -3896,6 +3913,7 @@ msgstr ""
 msgid "Limit-based"
 msgstr ""
 
+#: src/marketplace/details/OfferingTabs.tsx
 #: src/openstack/openstack-instance/OpenstackInstanceCheckoutSummary.tsx
 #: src/openstack/openstack-volume/OpenstackVolumeCheckoutSummary.tsx
 msgid "Limits"
